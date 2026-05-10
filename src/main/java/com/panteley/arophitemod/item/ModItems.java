@@ -9,7 +9,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ArophiteMod.MOD_ID);
 
-    /* ITEMS */
+    /* ITEMS  */
     public static final DeferredItem<Item> RAW_AROPHITE = ITEMS.register("raw_arophite",
             () -> new Item(new Item.Properties()));
 
