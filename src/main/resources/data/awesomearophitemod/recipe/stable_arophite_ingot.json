@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "awesomearophitemod:stable_arophite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "awesomearophitemod:stable_arophite_ingot"
+  }
+}

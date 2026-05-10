@@ -1,0 +1,17 @@
+{
+  "item.awesomearophitemod.raw_arophite": "Raw Arophite",
+  "item.awesomearophitemod.unstable_arophite_ingot": "Unstable Arophite Ignot",
+  "item.awesomearophitemod.stable_arophite_ingot": "Stable Arophite Ignot",
+  "item.awesomearophitemod.unstable_arophite_sword": "Unstable Arophite Sword",
+  "item.awesomearophitemod.unstable_arophite_pickaxe": "Unstable Arophite Pickaxe",
+  "item.awesomearophitemod.unstable_arophite_axe": "Unstable Arophite Axe",
+  "item.awesomearophitemod.unstable_arophite_shovel": "Unstable Arophite Shovel",
+  "item.awesomearophitemod.unstable_arophite_hoe": "Unstable Arophite Hoe",
+
+  "block.awesomearophitemod.arophite_ore": "Arophite Ore",
+  "block.awesomearophitemod.deepslate_arophite_ore": "Deepslate Arophite Ore",
+  "block.awesomearophitemod.unstable_arophite_block": "Unstable Arophite Block",
+  "block.awesomearophitemod.stable_arophite_block": "Stable Arophite Block",
+
+  "creativetab.arophitemod.arophite_items": "Awesome Arophite"
+}

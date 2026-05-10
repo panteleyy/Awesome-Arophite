@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "awesomearophitemod:item/unstable_arophite_hoe"
+  }
+}

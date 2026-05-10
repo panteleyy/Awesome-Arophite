@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "awesomearophitemod:arophite_ore",
+    "awesomearophitemod:deepslate_arophite_ore",
+    "awesomearophitemod:unstable_arophite_block",
+    "awesomearophitemod:stable_arophite_block"
+  ]
+}
