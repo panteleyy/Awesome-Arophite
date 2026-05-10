@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "awesomearophitemod:item/raw_arophite2"
+    "layer0": "awesomearophitemod:item/raw_arophite"
   }
-}s
+}
