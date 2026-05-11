@@ -15,13 +15,14 @@ public class ModEvents {
         if (event.getState().getBlock() == ModBlocks.AROPHITE_ORE.get()) {
             System.out.println("Игрок жестко сломал АРОФИТИКС");
             if (event.getPlayer() instanceof ServerPlayer player) {
-                player.setData(ModAttachments.EFFECT_INSTABILITY, 100);
 
-                int instability = player.getData(ModAttachments.EFFECT_INSTABILITY);
+                int current_instability = player.getData(ModAttachments.EFFECT_INSTABILITY);
+                player.setData(ModAttachments.EFFECT_INSTABILITY, current_instability + 10);
 
-                System.out.println("Его нестабильность " + instability);
+                System.out.println("Его нестабильность " + player.getData(ModAttachments.EFFECT_INSTABILITY));
             }
 
         }
     }
 }
+
