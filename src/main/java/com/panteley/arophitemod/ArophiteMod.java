@@ -1,5 +1,6 @@
 package com.panteley.arophitemod;
 
+import com.panteley.arophitemod.attachment.ModAttachments;
 import com.panteley.arophitemod.block.ModBlocks;
 import com.panteley.arophitemod.item.ModCreativeModeTabs;
 import com.panteley.arophitemod.item.ModItems;
@@ -42,6 +43,8 @@ public class ArophiteMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModAttachments.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
