@@ -1,5 +1,6 @@
 package com.panteley.arophitemod.attachment;
 
+import com.mojang.serialization.Codec;
 import com.panteley.arophitemod.ArophiteMod;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.attachment.AttachmentType;
@@ -15,7 +16,7 @@ public class ModAttachments {
 
     public static final DeferredHolder<AttachmentType<?>, AttachmentType<Integer>> EFFECT_INSTABILITY =
             INSTABILITY.register("effect_instability",
-                    () -> AttachmentType.builder(() -> 0).build());
+                    () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).copyOnDeath().build());
 
     public static void register(IEventBus eventBus) {
         INSTABILITY.register(eventBus);
