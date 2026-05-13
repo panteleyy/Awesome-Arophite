@@ -2,8 +2,6 @@ package com.panteley.arophitemod.item;
 
 import com.panteley.arophitemod.ArophiteMod;
 import com.panteley.arophitemod.block.ModBlocks;
-import jdk.jfr.Event;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -24,6 +22,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_AROPHITE);
                         output.accept(ModItems.UNSTABLE_AROPHITE_INGOT);
                         output.accept(ModItems.STABLE_AROPHITE_INGOT);
+                        output.accept(ModItems.UNSTABLE_AROPHITE_DUST);
                         output.accept(ModBlocks.AROPHITE_ORE);
                         output.accept(ModBlocks.DEEPSLATE_AROPHITE_ORE);
                         output.accept(ModBlocks.UNSTABLE_AROPHITE_BLOCK);

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "awesomearophitemod:item/unstable_arophite_dust"
+  }
+}

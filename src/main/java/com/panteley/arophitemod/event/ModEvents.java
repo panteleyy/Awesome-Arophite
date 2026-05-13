@@ -20,16 +20,22 @@ public class ModEvents {
 
         if (event.getPlayer() instanceof ServerPlayer player) {
 
+            int current_instability = player.getData(ModAttachments.EFFECT_INSTABILITY);
+
             // ЕСЛИ СЛОМАЕТ АРОФИТОВУЮ РУДУ
-            if (event.getState().getBlock() == ModBlocks.AROPHITE_ORE.get() ||
-                    event.getState().getBlock() == ModBlocks.DEEPSLATE_AROPHITE_ORE.get()) {
+            if (event.getState().getBlock() == ModBlocks.AROPHITE_ORE.get()) {
 
-                System.out.println("Игрок жестко сломал АРОФИТИКС");
-                int current_instability = player.getData(ModAttachments.EFFECT_INSTABILITY);
-                player.setData(ModAttachments.EFFECT_INSTABILITY, current_instability + 10);
+                int random_instability = getRandom(1, 2);
+                player.setData(ModAttachments.EFFECT_INSTABILITY, current_instability + random_instability);
+                System.out.println("Нестабильность " + player.getData(ModAttachments.EFFECT_INSTABILITY) + " " +
+                        "Добавилось" + random_instability);
+            }
+            if (event.getState().getBlock() == ModBlocks.DEEPSLATE_AROPHITE_ORE.get()) {
 
-                System.out.println("Его нестабильность " + player.getData(ModAttachments.EFFECT_INSTABILITY));
-
+                int random_instability = getRandom(1, 4);
+                player.setData(ModAttachments.EFFECT_INSTABILITY, current_instability + random_instability);
+                System.out.println("Нестабильность " + player.getData(ModAttachments.EFFECT_INSTABILITY) +
+                        "Добавилось " + random_instability);
             }
         }
     }
@@ -45,9 +51,11 @@ public class ModEvents {
 
                 System.out.println("Игрок жестко СКРАФТИЛ из арофитикс");
                 int current_instability = player.getData(ModAttachments.EFFECT_INSTABILITY);
-                player.setData(ModAttachments.EFFECT_INSTABILITY, current_instability + 5);
+                int random_instability = getRandom(3, 5) ;
+                player.setData(ModAttachments.EFFECT_INSTABILITY, current_instability + random_instability);
 
-                System.out.println("Его нестабильность " + player.getData(ModAttachments.EFFECT_INSTABILITY));
+                System.out.println("Нестабильность " + player.getData(ModAttachments.EFFECT_INSTABILITY) +
+                        "Добавилось " + random_instability);
             }
         }
     }
@@ -62,13 +70,24 @@ public class ModEvents {
         int current_instability = player.getData(ModAttachments.EFFECT_INSTABILITY);
         if (player.tickCount % 300 == 0) {
 
-            if (current_instability > 100) {
+            if (current_instability >= 100) {
                 player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,
+                        200, 1, false, true, true));
+            }
+            else if (current_instability >= 50) {
+                player.addEffect(new MobEffectInstance(MobEffects.LEVITATION,
                         200, 1, false, true, true));
             }
         }
 
 
+    }
+
+    public static int getRandom(int min, int max) {
+
+        int range = (max - min) + 1;
+        int random = (int) ((range * Math.random()) + min);
+        return random;
     }
 }
 

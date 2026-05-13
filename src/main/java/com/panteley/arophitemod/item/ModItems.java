@@ -16,8 +16,13 @@ public class ModItems {
     public static final DeferredItem<Item> UNSTABLE_AROPHITE_INGOT = ITEMS.register("unstable_arophite_ingot",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> UNSTABLE_AROPHITE_DUST = ITEMS.register("unstable_arophite_dust",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> STABLE_AROPHITE_INGOT = ITEMS.register("stable_arophite_ingot",
             () -> new Item(new Item.Properties()));
+
+
 
     /* TOOLS */
 
