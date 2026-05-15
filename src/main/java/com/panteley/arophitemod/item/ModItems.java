@@ -22,6 +22,9 @@ public class ModItems {
     public static final DeferredItem<Item> STABLE_AROPHITE_INGOT = ITEMS.register("stable_arophite_ingot",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> CHARGED_AROPHITE_DUST = ITEMS.register("charged_arophite_dust",
+            () -> new ItemFoil(new Item.Properties()));
+
 
 
     /* TOOLS */
@@ -59,4 +62,6 @@ public class ModItems {
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
+
+
 }
