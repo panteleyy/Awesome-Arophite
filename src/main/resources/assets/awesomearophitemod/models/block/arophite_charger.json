@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "awesomearophitemod:block/unstable_arophite_block"
+    "all": "awesomearophitemod:block/arophite_charger"
   }
 }
