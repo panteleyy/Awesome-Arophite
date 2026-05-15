@@ -1,5 +1,6 @@
 package com.panteley.arophitemod.block;
 
+import com.panteley.arophitemod.block.custom.ArophiteCharger;
 import net.minecraft.world.level.block.Block;
 import com.panteley.arophitemod.ArophiteMod;
 import com.panteley.arophitemod.item.ModItems;
@@ -27,7 +28,10 @@ public class ModBlocks {
             () -> new Block(Block.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> STABLE_AROPHITE_BLOCK = registerBlock("stable_arophite_block",
+
             () -> new Block(Block.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> AROPHITE_CHARGER = registerBlock("arophite_charger",
+            () -> new ArophiteCharger(Block.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
