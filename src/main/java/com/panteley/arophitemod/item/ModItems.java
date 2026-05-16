@@ -25,6 +25,9 @@ public class ModItems {
     public static final DeferredItem<Item> CHARGED_AROPHITE_DUST = ITEMS.register("charged_arophite_dust",
             () -> new ItemFoil(new Item.Properties()));
 
+    public static final DeferredItem<Item> LIGHTNING_CORE = ITEMS.register("lightning_core",
+            () -> new ItemFoil(new Item.Properties()));
+
 
 
     /* TOOLS */

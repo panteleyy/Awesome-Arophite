@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "awesomearophitemod:unstable_arophite_ingot"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "B": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "pattern": [
+    "DID",
+    "IBI",
+    "DID"
+  ],
+  "result": {
+    "count": 1,
+    "id": "awesomearophitemod:lightning_core"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "awesomearophitemod:unstable_arophite_block"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "L": {
+      "item": "awesomearophitemod:lightning_core"
+    }
+  },
+  "pattern": [
+    "OBO",
+    "DLD",
+    "OBO"
+  ],
+  "result": {
+    "count": 1,
+    "id": "awesomearophitemod:arophite_charger"
+  }
+}
