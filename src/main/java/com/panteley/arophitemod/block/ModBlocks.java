@@ -1,13 +1,11 @@
 package com.panteley.arophitemod.block;
 
-import com.panteley.arophitemod.block.custom.ArophiteCharger;
 import net.minecraft.world.level.block.Block;
 import com.panteley.arophitemod.ArophiteMod;
 import com.panteley.arophitemod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -31,7 +29,7 @@ public class ModBlocks {
 
             () -> new Block(Block.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> AROPHITE_CHARGER = registerBlock("arophite_charger",
-            () -> new ArophiteCharger(Block.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+            () -> new Block(Block.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
