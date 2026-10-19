@@ -28,6 +28,8 @@ public class ModItems {
     public static final DeferredItem<Item> LIGHTNING_CORE = ITEMS.register("lightning_core",
             () -> new ItemFoil(new Item.Properties()));
 
+    public static final DeferredItem<Item> AROPHITE_STAR = ITEMS.register("arophite_star",
+            () -> new Item(new Item.Properties()));
 
 
     /* TOOLS */
