@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": { "layer0": "awesomearophitemod:item/arophite_star" },
+  "overrides": [
+    { "predicate": { "awesomearophitemod:instability": 10 }, "model": "awesomearophitemod:item/arophite_star_2" },
+    { "predicate": { "awesomearophitemod:instability": 30 }, "model": "awesomearophitemod:item/arophite_star_3" },
+    { "predicate": { "awesomearophitemod:instability": 50 }, "model": "awesomearophitemod:item/arophite_star_4" }
+  ]
+}

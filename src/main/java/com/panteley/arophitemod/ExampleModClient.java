@@ -9,6 +9,10 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import com.panteley.arophitemod.attachment.ModAttachments;
+import com.panteley.arophitemod.item.ModItems;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.resources.ResourceLocation;
 
 // This class will not load on dedicated servers. Accessing client side code from here is safe.
 @Mod(value = ArophiteMod.MOD_ID, dist = Dist.CLIENT)
@@ -24,6 +28,13 @@ public class ExampleModClient {
 
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
+        event.enqueueWork(() -> ItemProperties.register(
+                ModItems.AROPHITE_STAR.get(),
+                ResourceLocation.fromNamespaceAndPath(ArophiteMod.MOD_ID, "instability"),
+                (stack, level, entity, seed) -> {
+                    var player = Minecraft.getInstance().player;
+                    return player == null ? 0f : (float) player.getData(ModAttachments.EFFECT_INSTABILITY);
+                }));
         // Some client setup code
         ArophiteMod.LOGGER.info("HELLO FROM CLIENT SETUP");
         ArophiteMod.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());

@@ -7,6 +7,7 @@ import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.minecraft.network.codec.ByteBufCodecs;
 
 
 public class ModAttachments {
@@ -16,7 +17,7 @@ public class ModAttachments {
 
     public static final DeferredHolder<AttachmentType<?>, AttachmentType<Integer>> EFFECT_INSTABILITY =
             INSTABILITY.register("effect_instability",
-                    () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).copyOnDeath().build());
+                    () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).sync(ByteBufCodecs.INT).copyOnDeath().build());
 
     public static void register(IEventBus eventBus) {
         INSTABILITY.register(eventBus);
