@@ -25,7 +25,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.UNSTABLE_AROPHITE_DUST);
                         output.accept(ModItems.CHARGED_AROPHITE_DUST);
                         output.accept(ModItems.LIGHTNING_CORE);
-                        output.accept(ModItems.AROPHITE_STAR);
                         output.accept(ModBlocks.AROPHITE_ORE);
                         output.accept(ModBlocks.DEEPSLATE_AROPHITE_ORE);
                         output.accept(ModBlocks.UNSTABLE_AROPHITE_BLOCK);
