@@ -17,5 +17,11 @@
   "block.awesomearophitemod.stable_arophite_block": "Stable Arophite Block",
   "block.awesomearophitemod.arophite_charger": "Arophite Charger",
 
-  "creativetab.arophitemod.arophite_items": "Awesome Arophite"
+  "creativetab.arophitemod.arophite_items": "Awesome Arophite",
+
+  "curios.identifier.instability_slot_0": "Instability slot I",
+  "curios.identifier.instability_slot_1": "Instability slot II",
+  "curios.identifier.instability_slot_2": "Instability slot III",
+  "curios.identifier.instability_slot_3": "Instability slot IV",
+  "curios.identifier.instability_slot_4": "Instability slot V"
 }

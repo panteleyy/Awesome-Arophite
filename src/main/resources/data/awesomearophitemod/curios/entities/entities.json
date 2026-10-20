@@ -1,0 +1,12 @@
+{
+  "entities": [
+    "minecraft:player"
+  ],
+  "slots": [
+    "instability_slot_0",
+    "instability_slot_1",
+    "instability_slot_2",
+    "instability_slot_3",
+    "instability_slot_4"
+  ]
+}
