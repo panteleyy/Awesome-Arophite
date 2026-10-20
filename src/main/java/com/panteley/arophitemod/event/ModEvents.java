@@ -7,6 +7,7 @@ import com.panteley.arophitemod.item.ModItems;
 import net.minecraft.commands.Commands;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -22,6 +23,7 @@ import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -186,13 +188,34 @@ public class ModEvents {
 
     }
 
-    @SubscribeEvent // on the game event bus
+    // Добавление новых комманд
+    @SubscribeEvent
     public static void registerCommands(RegisterCommandsEvent event) {
+
+        //instability count -> выводит количество нестабильности в игроке
         event.getDispatcher().register(
-                Commands.literal("arophite")
+                Commands.literal("instability")
                         .then(Commands.literal("count")
                                 .executes(context -> {
-                                    System.out.println("Player use command");
+
+                                    ServerPlayer player = context.getSource().getPlayerOrException();
+                                    int currentInstability = player.getData(ModAttachments.EFFECT_INSTABILITY);
+
+                                    context.getSource().sendSuccess(
+                                            () -> Component.literal("Instability " + currentInstability), false
+                                    );
+
+                                    return Command.SINGLE_SUCCESS;
+                                })
+
+                        //instability reset -> сбрасывает нестабильность в игроке
+                        ).then(Commands.literal("reset")
+                                .executes(context -> {
+                                    ServerPlayer player = context.getSource().getPlayerOrException();
+                                    player.setData(ModAttachments.EFFECT_INSTABILITY, 0);
+                                    context.getSource().sendSuccess(
+                                            () -> Component.literal("Instability was reset"), false
+                                    );
 
                                     return Command.SINGLE_SUCCESS;
                                 })
