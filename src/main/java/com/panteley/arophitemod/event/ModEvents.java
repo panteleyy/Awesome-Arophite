@@ -1,8 +1,10 @@
 package com.panteley.arophitemod.event;
 
+import com.mojang.brigadier.Command;
 import com.panteley.arophitemod.attachment.ModAttachments;
 import com.panteley.arophitemod.block.ModBlocks;
 import com.panteley.arophitemod.item.ModItems;
+import net.minecraft.commands.Commands;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -16,6 +18,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
@@ -44,15 +47,15 @@ public class ModEvents {
 
                 int random_instability = getRandom(1, 2);
                 player.setData(ModAttachments.EFFECT_INSTABILITY, current_instability + random_instability);
-                System.out.println("Нестабильность " + player.getData(ModAttachments.EFFECT_INSTABILITY) + " " +
-                        "Добавилось" + random_instability);
+                System.out.println("Instability = " + player.getData(ModAttachments.EFFECT_INSTABILITY) +
+                        "\n+" + random_instability);
             }
             if (event.getState().getBlock() == ModBlocks.DEEPSLATE_AROPHITE_ORE.get()) {
 
                 int random_instability = getRandom(1, 4);
                 player.setData(ModAttachments.EFFECT_INSTABILITY, current_instability + random_instability);
-                System.out.println("Нестабильность " + player.getData(ModAttachments.EFFECT_INSTABILITY) +
-                        "Добавилось " + random_instability);
+                System.out.println("Instability = " + player.getData(ModAttachments.EFFECT_INSTABILITY) +
+                        "\n+" + random_instability);
             }
         }
     }
@@ -66,13 +69,13 @@ public class ModEvents {
                     event.getCrafting().getItem() == ModItems.UNSTABLE_AROPHITE_HOE.get()) {
 
 
-                System.out.println("Игрок жестко СКРАФТИЛ из арофитикс");
+                System.out.println("Player craft with Arophite");
                 int current_instability = player.getData(ModAttachments.EFFECT_INSTABILITY);
                 int random_instability = getRandom(3, 5) ;
                 player.setData(ModAttachments.EFFECT_INSTABILITY, current_instability + random_instability);
 
-                System.out.println("Нестабильность " + player.getData(ModAttachments.EFFECT_INSTABILITY) +
-                        "Добавилось " + random_instability);
+                System.out.println("Instability = " + player.getData(ModAttachments.EFFECT_INSTABILITY) +
+                        "\n+" + random_instability);
             }
         }
     }
@@ -162,6 +165,9 @@ public class ModEvents {
             }
         }
 
+        // Накладывание эффектов при определенной "нестабильности"
+
+        /*
         int current_instability = player.getData(ModAttachments.EFFECT_INSTABILITY);
         if (player.tickCount % 300 == 0) {
 
@@ -175,7 +181,23 @@ public class ModEvents {
             }
         }
 
+         */
 
+
+    }
+
+    @SubscribeEvent // on the game event bus
+    public static void registerCommands(RegisterCommandsEvent event) {
+        event.getDispatcher().register(
+                Commands.literal("arophite")
+                        .then(Commands.literal("count")
+                                .executes(context -> {
+                                    System.out.println("Player use command");
+
+                                    return Command.SINGLE_SUCCESS;
+                                })
+                        )
+        );
     }
 
     public static int getRandom(int min, int max) {
