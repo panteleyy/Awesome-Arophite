@@ -28,11 +28,19 @@ public class ModItems {
     public static final DeferredItem<Item> LIGHTNING_CORE = ITEMS.register("lightning_core",
             () -> new ItemFoil(new Item.Properties()));
 
+    //public static final DeferredItem<Item> iINSTABLE_SCROLL_OF_SOULBINDING = ITEMS.register("instable_scroll_of_soulbinding",
+    //        () -> new Item(new Item.Properties().stacksTo(1)));
+
+    //public static final DeferredItem<Item> qSTABLE_SCROLL_OF_SOULBINDING = ITEMS.register("stable_scroll_of_soulbinding",
+    //        () -> new Item(new Item.Properties().stacksTo(1)));
+
     public static final DeferredItem<Item> INSTABLE_SCROLL_OF_SOULBINDING = ITEMS.register("instable_scroll_of_soulbinding",
-            () -> new Item(new Item.Properties().stacksTo(1)));
+            () -> new SlotScrollItem(new Item.Properties().stacksTo(1),
+                    "instability_slot_0", "instability_slot_1", "instability_slot_2"));
 
     public static final DeferredItem<Item> STABLE_SCROLL_OF_SOULBINDING = ITEMS.register("stable_scroll_of_soulbinding",
-            () -> new Item(new Item.Properties().stacksTo(1)));
+            () -> new SlotScrollItem(new Item.Properties().stacksTo(1),
+                    "stability_slot_0", "stability_slot_1"));
 
 
 
