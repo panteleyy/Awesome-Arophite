@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": { "I": { "item": "awesomearophitemod:unstable_arophite_ingot" } },
+  "pattern": [
+    "I I",
+    "III",
+    "III"
+  ],
+  "result": { "id": "awesomearophitemod:unstable_arophite_chestplate", "count": 1 }
+}

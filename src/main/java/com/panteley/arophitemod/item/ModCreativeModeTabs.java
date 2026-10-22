@@ -37,6 +37,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.UNSTABLE_AROPHITE_HOE);
                         output.accept(ModItems.UNSTABLE_SCROLL_OF_SOULBINDING);
                         output.accept(ModItems.STABLE_SCROLL_OF_SOULBINDING);
+                        output.accept(ModItems.UNSTABLE_AROPHITE_HELMET);
+                        output.accept(ModItems.UNSTABLE_AROPHITE_CHESTPLATE);
+                        output.accept(ModItems.UNSTABLE_AROPHITE_LEGGINGS);
+                        output.accept(ModItems.UNSTABLE_AROPHITE_BOOTS);
 
                     })
                     .build());
