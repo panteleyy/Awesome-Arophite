@@ -9,6 +9,35 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ArophiteMod.MOD_ID);
 
+    /* ARMORS  */
+    public static final DeferredItem<ArmorItem> UNSTABLE_AROPHITE_HELMET = ITEMS.register("instabiliti_arophite_helmet",
+            () -> new ArmorItem(
+                    ModArmorMaterials.UNSTABLE_AROPHITE,
+                    ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(33))
+            ));
+
+    public static final DeferredItem<ArmorItem> UNSTABLE_AROPHITE_CHESTPLATE = ITEMS.register("instabiliti_arophite_chestplate",
+            () -> new ArmorItem(
+                    ModArmorMaterials.UNSTABLE_AROPHITE,
+                    ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(33))
+            ));
+
+    public static final DeferredItem<ArmorItem> UNSTABLE_AROPHITE_LEGGINGS = ITEMS.register("instabiliti_arophite_leggings",
+            () -> new ArmorItem(
+                    ModArmorMaterials.UNSTABLE_AROPHITE,
+                    ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(33))
+            ));
+
+    public static final DeferredItem<ArmorItem> UNSTABLE_AROPHITE_BOOTS = ITEMS.register("instabiliti_arophite_boots",
+            () -> new ArmorItem(
+                    ModArmorMaterials.UNSTABLE_AROPHITE,
+                    ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(33))
+            ));
+
     /* ITEMS  */
     public static final DeferredItem<Item> RAW_AROPHITE = ITEMS.register("raw_arophite",
             () -> new Item(new Item.Properties()));
