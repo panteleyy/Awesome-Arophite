@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "awesomearophitemod:item/instable_scroll_of_soulbinding"
-  }
-}

@@ -10,7 +10,7 @@
   "item.awesomearophitemod.unstable_arophite_axe": "Unstable Arophite Axe",
   "item.awesomearophitemod.unstable_arophite_shovel": "Unstable Arophite Shovel",
   "item.awesomearophitemod.unstable_arophite_hoe": "Unstable Arophite Hoe",
-  "item.awesomearophitemod.instable_scroll_of_soulbinding": "Instable Scroll of Soulbinding",
+  "item.awesomearophitemod.unstable_scroll_of_soulbinding": "Unstable Scroll of Soulbinding",
   "item.awesomearophitemod.stable_scroll_of_soulbinding": "Stable Scroll of Soulbinding",
 
   "block.awesomearophitemod.arophite_ore": "Arophite Ore",
@@ -21,9 +21,9 @@
 
   "creativetab.arophitemod.arophite_items": "Awesome Arophite",
 
-  "curios.identifier.instability_slot_0": "Instability slot I",
-  "curios.identifier.instability_slot_1": "Instability slot II",
-  "curios.identifier.instability_slot_2": "Instability slot III",
-  "curios.identifier.stability_slot_0": "Stability slot I",
-  "curios.identifier.stability_slot_1": "Stability slot II"
+  "curios.identifier.unstable_slot_0": "Unstable slot I",
+  "curios.identifier.unstable_slot_1": "Unstable slot II",
+  "curios.identifier.unstable_slot_2": "Unstable slot III",
+  "curios.identifier.stable_slot_0": "Stable slot I",
+  "curios.identifier.stable_slot_1": "Stable slot II"
 }

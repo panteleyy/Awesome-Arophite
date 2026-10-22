@@ -35,7 +35,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.UNSTABLE_AROPHITE_AXE);
                         output.accept(ModItems.UNSTABLE_AROPHITE_SHOVEL);
                         output.accept(ModItems.UNSTABLE_AROPHITE_HOE);
-                        output.accept(ModItems.INSTABLE_SCROLL_OF_SOULBINDING);
+                        output.accept(ModItems.UNSTABLE_SCROLL_OF_SOULBINDING);
                         output.accept(ModItems.STABLE_SCROLL_OF_SOULBINDING);
 
                     })

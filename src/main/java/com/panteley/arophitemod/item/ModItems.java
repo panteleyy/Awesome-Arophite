@@ -34,13 +34,13 @@ public class ModItems {
     //public static final DeferredItem<Item> qSTABLE_SCROLL_OF_SOULBINDING = ITEMS.register("stable_scroll_of_soulbinding",
     //        () -> new Item(new Item.Properties().stacksTo(1)));
 
-    public static final DeferredItem<Item> INSTABLE_SCROLL_OF_SOULBINDING = ITEMS.register("instable_scroll_of_soulbinding",
+    public static final DeferredItem<Item> UNSTABLE_SCROLL_OF_SOULBINDING = ITEMS.register("unstable_scroll_of_soulbinding",
             () -> new SlotScrollItem(new Item.Properties().stacksTo(1),
-                    "instability_slot_0", "instability_slot_1", "instability_slot_2"));
+                    "unstable_slot_0", "unstable_slot_1", "unstable_slot_2"));
 
     public static final DeferredItem<Item> STABLE_SCROLL_OF_SOULBINDING = ITEMS.register("stable_scroll_of_soulbinding",
             () -> new SlotScrollItem(new Item.Properties().stacksTo(1),
-                    "stability_slot_0", "stability_slot_1"));
+                    "stable_slot_0", "stable_slot_1"));
 
 
 

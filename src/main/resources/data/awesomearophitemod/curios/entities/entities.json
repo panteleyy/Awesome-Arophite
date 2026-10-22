@@ -3,10 +3,10 @@
     "minecraft:player"
   ],
   "slots": [
-    "instability_slot_0",
-    "instability_slot_1",
-    "instability_slot_2",
-    "stability_slot_0",
-    "stability_slot_1"
+    "unstable_slot_0",
+    "unstable_slot_1",
+    "unstable_slot_2",
+    "stable_slot_0",
+    "stable_slot_1"
   ]
 }

@@ -20,11 +20,11 @@ public class SlotScrollItem extends Item {
     private final String[] slots;
 
     private static final Map<String, Integer> COSTS = Map.of(
-            "instability_slot_0", 10,
-            "instability_slot_1", 20,
-            "instability_slot_2", 30,
-            "stability_slot_0", 40,
-            "stability_slot_1", 50
+            "unstable_slot_0", 10,
+            "unstable_slot_1", 20,
+            "unstable_slot_2", 30,
+            "stable_slot_0", 40,
+            "stable_slot_1", 50
     );
 
     public SlotScrollItem(Properties props, String... slots) {
